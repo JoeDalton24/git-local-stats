@@ -1,6 +1,6 @@
 {
   "name": "git-local-stats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An CLi for visualizing local Git contributions",
   "main": "index.js",
   "bin": {
