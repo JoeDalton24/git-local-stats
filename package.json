@@ -4,7 +4,7 @@
   "description": "An CLi for visualizing local Git contributions",
   "main": "index.js",
   "bin": {
-    "git-local-stats": "dist/index.js"
+    "git-local-stats": "bin/index.js"
   },
   "scripts": {
     "build": "tsc",
