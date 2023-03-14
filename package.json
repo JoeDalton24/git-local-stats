@@ -7,7 +7,7 @@
     "git-local-stats": "dist/index.js"
   },
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc",
     "install": "pnpm run build && npm install -g && git-local-stats --path ~/Documents --author Ibrahima Diama KA"
   },
   "keywords": [
