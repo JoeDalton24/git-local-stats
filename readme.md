@@ -45,13 +45,13 @@ Build and install locally
 - change **_install_** script inside `packgage.json` by providing valid **path** and **contributor name**
 
 ```bash
-pnpm run install
+npm run install
 ```
 
 Build
 
 ```bash
-pnpm run build
+npm run build
 ```
 
 ## License 🎫
