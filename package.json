@@ -1,25 +1,35 @@
 {
-  "name": "node-cli",
+  "name": "git-local-stats",
   "version": "1.0.0",
-  "description": "",
+  "description": "An CLi for visualizing local Git contributions",
   "main": "index.js",
   "bin": {
-    "git-gh": "dist/index.js"
+    "git-local-stats": "dist/index.js"
   },
   "scripts": {
-    "dev": "pnpm run build && npm install -g && git-gh kaibrahima32@gmail.com ~/Desktop/my-projects/fe-my-notes/",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "install": "pnpm run build && npm install -g && git-local-stats --path ~/Documents --author Ibrahima Diama KA"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "typescript",
+    "cli",
+    "git contributions",
+    "nodejs"
+  ],
+  "author": "Ibrahima Diama KA",
   "license": "ISC",
   "devDependencies": {
+    "@types/figlet": "^1.5.5",
     "@types/node": "^18.14.6",
     "@types/yargs": "^17.0.22",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "cli-gh-cal": "^1.4.13",
+    "dayjs": "^1.11.7",
+    "figlet": "^1.5.2",
+    "gitlog": "^4.0.4",
     "yargs": "^17.7.1"
   }
 }
