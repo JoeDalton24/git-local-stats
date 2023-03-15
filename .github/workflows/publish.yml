@@ -15,7 +15,7 @@ jobs:
       - run: npm run build
       - run: chmod u+x dist/index.js
       - run: mkdir dist/assets
-      - run: cp -R assets/* /dist/assets
+      - run: cp -R assets/* ./dist/assets
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
