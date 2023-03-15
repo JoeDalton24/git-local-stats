@@ -1,14 +1,14 @@
 {
   "name": "git-local-stats",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An CLi for visualizing local Git contributions",
   "main": "index.js",
   "bin": {
-    "git-local-stats": "bin/index.js"
+    "git-local-stats": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "install": "npm run build && npm install -g && git-local-stats --path ~/Documents --author Ibrahima Diama KA"
+    "install": "npm run build && npm install -g --ignore-scripts && git-local-stats --path ~/Documents --author Ibrahima Diama KA"
   },
   "keywords": [
     "typescript",
