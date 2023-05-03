@@ -1,6 +1,6 @@
 {
   "name": "git-local-stats",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "An CLi for visualizing local Git contributions",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "install": "npm run build && npm install -g --ignore-scripts && git-local-stats --path ~/Documents --author Ibrahima Diama KA"
+    "install": "npm run build && npm install -g --ignore-scripts && git-local-stats --path ~/Documents --author Ibrahima Diama KA --numberCommit 1000"
   },
   "keywords": [
     "typescript",
@@ -16,6 +16,8 @@
     "git contributions",
     "nodejs"
   ],
+  "repository": "https://github.com/JoeDalton24/git-local-stats",
+  "homepage": "https://github.com/JoeDalton24/git-local-stats#readme",
   "author": "Ibrahima Diama KA",
   "license": "ISC",
   "devDependencies": {

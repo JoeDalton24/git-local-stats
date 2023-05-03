@@ -54,7 +54,8 @@ export function getDayOfYear(): Calendar {
 export function getAllCommits(
   respositories: Array<string>,
   lastYear: string,
-  author: string
+  author: string,
+  numberCommit?: number
 ): Calendar {
   let commits: Array<CommitField> = [];
 
@@ -64,7 +65,7 @@ export function getAllCommits(
       all: true,
       fields: ["authorDate"],
       author: author,
-      number: 1000,
+      number: numberCommit ?? 1000,
       since: lastYear,
     };
 

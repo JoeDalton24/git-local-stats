@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import figlet from "figlet";
-import yargs from "yargs";
+import yargs, { number } from "yargs";
 import {
   scanDir,
   getLastYear,
@@ -24,13 +24,18 @@ const argv = yargs(process.argv.slice(2))
       describe: "contributor name",
       demandOption: true,
     },
+    numberCommit: {
+      type: "number",
+      describe: "The number of commits to return, defaults to 1000",
+      demandOption: false,
+    },
   })
   .scriptName("git-local-stats")
   .usage("$0 --path <folder_path> --author <contributor_name>")
   .help()
   .parseSync();
 
-const { path, author } = argv;
+const { path, author, numberCommit } = argv;
 
 if (!path || !author) {
   throw new Error();
@@ -39,7 +44,12 @@ if (!path || !author) {
 const main = (): void => {
   const respositories = scanDir([], path);
   const lastYear = getLastYear();
-  const allCommits = getAllCommits(respositories, lastYear, author);
+  const allCommits = getAllCommits(
+    respositories,
+    lastYear,
+    author,
+    numberCommit
+  );
   const commits = formatCommits(allCommits);
 
   printGraph(mergeSort(commits), "DARK");
